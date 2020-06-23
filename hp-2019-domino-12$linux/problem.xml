@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="12" short-name="hp-2019-domino" url="https://polygon.codeforces.com/p5YugUo/mgustokashin/hp-2019-domino">
+    <names>
+        <name language="russian" value="Домино"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="russian" mathjax="true" path="statements/russian/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="russian" mathjax="true" path="statements/.html/russian/problem.html" type="text/html"/>
+        <statement language="russian" path="statements/.pdf/russian/problem.pdf" type="application/pdf"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>32</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test group="0" method="manual" sample="true"/>
+                <test group="0" method="manual" sample="true"/>
+                <test cmd="gen 5 0 random" group="1" method="generated"/>
+                <test cmd="gen 5 3 random" group="1" method="generated"/>
+                <test cmd="gen 15 10 random" group="1" method="generated"/>
+                <test cmd="gen 20 5 random 300" group="1" method="generated"/>
+                <test cmd="gen 20 1 random" group="1" method="generated"/>
+                <test cmd="gen 20 3 random" group="1" method="generated"/>
+                <test cmd="gen 20 10 random" group="1" method="generated"/>
+                <test cmd="gen 20 13 random" group="1" method="generated"/>
+                <test cmd="gen 20 15 random" group="1" method="generated"/>
+                <test cmd="gen 20 15 random 1" group="1" method="generated"/>
+                <test cmd="gen 20 17 random 1" group="1" method="generated"/>
+                <test cmd="gen 20 19 random 300" group="1" method="generated"/>
+                <test cmd="gen 20 20 random" group="1" method="generated"/>
+                <test cmd="gen 20 20 random 300" group="1" method="generated"/>
+                <test cmd="gen 20 20 equal" group="1" method="generated"/>
+                <test cmd="gen 10000 5 random" group="2" method="generated"/>
+                <test cmd="gen 1000 30 random" group="2" method="generated"/>
+                <test cmd="gen 1000 200 random" group="2" method="generated"/>
+                <test cmd="gen 1000 200 random 5" group="2" method="generated"/>
+                <test cmd="gen 1000 200 equal" group="2" method="generated"/>
+                <test cmd="gen 2000 50 random" group="2" method="generated"/>
+                <test cmd="gen 2000 75 random" group="2" method="generated"/>
+                <test cmd="gen 2000 100 random" group="2" method="generated"/>
+                <test cmd="gen 5000 20 random" group="2" method="generated"/>
+                <test cmd="gen 5000 40 random" group="2" method="generated"/>
+                <test cmd="gen 100000 2 random" group="2" method="generated"/>
+                <test cmd="gen 50000 4 random" group="2" method="generated"/>
+                <test cmd="gen 50000 4 random 4" group="2" method="generated"/>
+                <test cmd="gen 50000 4 equal" group="2" method="generated"/>
+                <test cmd="gen 100000 1 random" group="2" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/checker.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/gen.cpp" type="cpp.g++17"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker type="testlib">
+            <source path="files/checker.cpp" type="cpp.g++17"/>
+            <copy path="check.cpp" type="cpp.g++17"/>
+            <testset>
+                <test-count>5</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests>
+                    <test verdict="ok"/>
+                    <test verdict="wrong-answer"/>
+                    <test verdict="wrong-answer"/>
+                    <test verdict="wrong-answer"/>
+                    <test verdict="crashed"/>
+                </tests>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <testset>
+                    <test-count>5</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="valid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="main">
+                <source path="solutions/debnatkh_ok_dp.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/domino1.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/domino2.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/domino3.cpp" type="cpp.g++17"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/domino_temp.py" type="python.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/ok_Akulyat.cpp" type="cpp.g++17"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>2</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list>
+            <stress index="2" path="stresses/002"/>
+            <stress index="1" path="stresses/001"/>
+        </list>
+    </stresses>
+    <tags>
+        <tag value="domino"/>
+        <tag value="dp"/>
+    </tags>
+</problem>

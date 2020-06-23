@@ -1,0 +1,1 @@
+{"id":"bab2aa63c782e5e728f34e2d10e932b1","index":2,"scriptPattern":"gen 10 [1..10] random 3 [1..32]","inputFile":"stdin","outputFile":"stdout","memoryLimit":256,"timeLimit":1000,"totalTimeLimit":120000,"solutionNames":["debnatkh_ok_dp.cpp","domino1.cpp"],"description":"","solutionNamesUid":""}

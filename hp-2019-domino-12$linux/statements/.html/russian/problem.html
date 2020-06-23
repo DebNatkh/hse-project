@@ -1,0 +1,33 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META content="no-cache" http-equiv="pragma">
+    <META content="-1" http-equiv="expires">
+    <META content="text/html;charset=UTF-8" http-equiv="content-type">
+    <LINK href="problem-statement.css" rel="stylesheet" type="text/css">
+    <TITLE>Домино</TITLE>
+    <SCRIPT type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+        });
+        </SCRIPT>
+        <SCRIPT async="" src="https://polygon.codeforces.com/lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+    </SCRIPT>
+</HEAD><BODY>
+    <DIV class="problem-statement"><DIV class="header"><DIV class="title">Домино</DIV><DIV class="time-limit"><DIV class="property-title">ограничение по времени на тест</DIV>1 секунда</DIV><DIV class="memory-limit"><DIV class="property-title">ограничение по памяти на тест</DIV>256 мегабайт</DIV><DIV class="input-file"><DIV class="property-title">ввод</DIV>стандартный ввод</DIV><DIV class="output-file"><DIV class="property-title">вывод</DIV>стандартный вывод</DIV></DIV><DIV class="legend"><P>Вася установил на телефон игру, где в каждой клетке полоски размером $$$2 \times N$$$ записано целое число. Цель игры состоит в том, чтобы накрыть часть клеток доминошками размерами $$$2 \times 1$$$ так, чтобы сумма чисел на не покрытых доминошками клетках была минимальной. </P><P>Доминошки можно поворачивать горизонтально или вертикально, они не могут накладываться. Обязательно использовать все имеющиеся доминошки.</P></DIV><P></P><P></P><DIV class="input-specification"><DIV class="section-title">Входные данные</DIV><P></P><P>В первой строке вводится два числа $$$N$$$ и $$$K$$$ ($$$1 \leq N \leq 2\cdot 10^5$$$, $$$0 \leq K \leq 2\cdot 10^5$$$, $$$0 \leq N \times K \leq 2\cdot 10^5$$$, $$$N \geq K$$$)&nbsp;&mdash; размер полоски и количество имеющихся доминошек.</P><P>В следующих $$$N$$$ строках вводятся по $$$2$$$ целых числа, записанных на полоске. Числа не превосходят $$$10^9$$$ по модулю.</P></DIV><P></P><P></P><DIV class="output-specification"><DIV class="section-title">Выходные данные</DIV><P></P><P>Выведите $$$N$$$ строк по 2 числа в каждой&nbsp;&mdash; описание расположения доминошек на полоске. Каждая клетка должна описываться либо числом от 1 до $$$K$$$&nbsp;&mdash; номером доминошки, которой она накрыта, либо числом 0, в случае, если она не накрыта доминошкой.</P><P>Если ответов несколько&nbsp;&mdash; выведите любой из них.</P></DIV><P></P><P></P><DIV class="sample-tests"><DIV class="section-title">Примеры</DIV><P></P><P></P><DIV class="sample-test"><DIV class="input"><DIV class="title">Входные данные</DIV><PRE class="content">
+3 2
+2 2
+3 3
+2 1
+</PRE></DIV><DIV class="output"><DIV class="title">Выходные данные</DIV><PRE class="content">
+0 1
+2 1
+2 0
+</PRE></DIV><DIV class="input"><DIV class="title">Входные данные</DIV><PRE class="content">
+2 1
+1 2
+3 4
+</PRE></DIV><DIV class="output"><DIV class="title">Выходные данные</DIV><PRE class="content">
+0 0
+1 1
+</PRE></DIV></DIV></DIV><P></P><P></P><DIV class="note"><DIV class="section-title">Примечание</DIV><P></P><P>Решения, верно работающие при $$$N \le 20$$$ будут получать не менее 50% баллов.</P></DIV></DIV><P></P><P>  
+
+</P></BODY></HTML>

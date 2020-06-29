@@ -60,9 +60,9 @@ input read_test() {
 
 // Print solution into stdout
 void display(pair <int, vector<int>> A) {
-    cout << A.second.size() << "\n";
+    cout << A.second.size() << " " << A.first << "\n";
     for (auto e : A.second) {
-        cout << e + 1 << " ";
+        // cout << e + 1 << " ";
     }
     cout << endl;
 }
@@ -116,7 +116,7 @@ pair <int, vector<int>> brutforce_solve(input I) {
 
 
     pair <int, vector<int>> answ;
-    answ.first = __builtin_popcount(ans_mask);
+    answ.first = ans;
     for (int i = 0; i < m; i++) {
         if (getbit(ans_mask, i)) {
             answ.second.push_back(i);
@@ -127,6 +127,7 @@ pair <int, vector<int>> brutforce_solve(input I) {
 
 // Randomised brutforce solution
 pair <int, vector<int>> brutforce_random(input I) {
+
     pair <int, vector<int>> answer = {0, {}};
     vector<int> order;
     for (int i = 0; i < I.m; ++i) {
@@ -159,7 +160,7 @@ pair <int, vector<int>> annealing(input I) {
     for (int iter = 0; iter < ITERS; iter++) {
 
         int x = random() % I.m;
-        
+
         if (taken.count(x)) {
             if (random() % ITERS < iter) {
                 taken.erase(x);
